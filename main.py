@@ -4,6 +4,7 @@ import os
 import praw
 import tkinter
 from tkinter import messagebox as msg
+#put your information into variable
 reddit = praw.Reddit(
      client_id="your client id",
      client_secret="your client secret",
