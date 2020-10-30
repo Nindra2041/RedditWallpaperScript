@@ -4,8 +4,6 @@ import os
 import praw
 import tkinter
 from tkinter import messagebox as msg
-#TODO: figure out how to get image from gallery
-#TODO: make it run when linux starts
 reddit = praw.Reddit(
      client_id="your client id",
      client_secret="your client secret",
