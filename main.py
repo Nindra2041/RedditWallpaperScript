@@ -21,13 +21,14 @@ def on_press(key):
         if key == Key.alt_r:
             is_pic = False
             while not is_pic:
-                if rnd.url[-4:] == ".jpg" or rnd.url[-4] == ".png" or rnd.url[-5] == ".jpeg":
+                if rnd.url[-4:] == ".jpg" or rnd.url[-4:] == ".png" or rnd.url[-5:] == ".jpeg":
                     is_pic = True
                     os.system("/usr/bin/gsettings set org.gnome.desktop.background picture-uri " + rnd.url)
                     #uncomment this line if you want to view the whole image
                     #os.system("gsettings set org.gnome.desktop.background picture-options \"scaled\"")
                 else:
-                     rnd = reddit.subreddit('Overwatch_Porn').random()
+                    #get random image and retry
+                    rnd = reddit.subreddit('earthporn').random()
         if key == KeyCode.from_char('/'):
             root = tkinter.Tk()
             root.withdraw()
